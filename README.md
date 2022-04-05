@@ -18,3 +18,17 @@ To use it, you have to do the extraction yourself first, then click the `Start!`
 * `bookmarks.json`: Your bookmarks.
 
 After clicking the `I'm Done` button or having selected all the four files, the control buttons, checkboxes and the pleromar headings will be removed and now you may use your browser to archive the whole page (try `Ctrl+S`).
+
+## Workaround
+
+Unlike Mastodon, archives from Pleroma do not contain the media files in toots and profiles, so we need to load online resources when viewing the archive.
+
+### CORS
+
+Since it fetches contents across domains, you will very like need to workaround this with, for example, [CORS Everywhere](https://addons.mozilla.org/en-US/firefox/addon/cors-everywhere/).
+
+### Download for Offline
+
+Well it seems only [Firefox](https://www.mozilla.org/en-US/firefox/) supports download the whole page along with all its resources. And this means:
+* With Firefox, if you save the whole page with `Ctrl+S` or the `Save page as...` button, I guarantee that your downloaded page is fully functional offline.
+* With Chromium (I did not test with Chrome), your saved page will still load online resources (images mostly). If your server is to be shutdown, your images will then be gone.
