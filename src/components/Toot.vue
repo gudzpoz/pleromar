@@ -4,7 +4,7 @@
     <img class="icon" :src="actor.icon.url" />
     <div>
       <span class="user">{{ user }}</span>
-      <span class="scope" :class="iconify(scope(toot))"></span>
+      <mdicon class="scope" :name="iconify(scope(toot))" />
       <span class="link" v-if="toot.object.inReplyTo">In Reply To
         <a :href="toot.object.inReplyTo">{{ toot.object.inReplyTo }}</a>
       </span>
@@ -72,10 +72,10 @@ export default {
     },
     iconify (type) {
       return {
-        'public': 'mdi mdi-web',
-        'unlisted': 'mdi mdi-lock-open-variant',
-        'followers': 'mdi mdi-lock',
-        'private': 'mdi mdi-email',
+        'public': 'web',
+        'unlisted': 'lock-open-variant',
+        'followers': 'lock',
+        'private': 'email',
       }[type]
     },
   },
@@ -119,5 +119,9 @@ span.link, span.user, span.scope, span.date {
     padding: 0 0.4em 0 0.4em;
     border-radius: 0.2em;
     margin-right: 1em;
+}
+span.scope svg {
+    max-height: 1.1em;
+    color: gray;
 }
 </style>

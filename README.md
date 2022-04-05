@@ -1,24 +1,20 @@
 # pleromar
 
-## Project setup
-```
-yarn install
-```
+Views your exported data from Pleroma
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+## Intro
 
-### Compiles and minifies for production
-```
-yarn build
-```
+Pleroma now offers [a backend API](https://docs-develop.pleroma.social/backend/development/API/pleroma_api/#create-a-user-backup-archive) to export user data backups. If you manages to request the archive (well, somehow, since the API is not yet exposed in the frontend), you may view it with pleromar.
 
-### Lints and fixes files
-```
-yarn lint
-```
+## Usage
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Pleromar is now available at [pleromar.vercel.app](pleromar.vercel.app).
+
+To use it, you have to do the extraction yourself first, then click the `Start!` button in the web page, and select the files you want to view.
+
+* `actor.json`: This file stores your account profile (avatar, name, etc.). Since your images (avatars and backgrounds) are stored instead on your instance server, you might want to make sure that your instance is still up.
+* `outbox.json`: To view this file, you need to select `actor.json` first. You may specify the scope of which you want to view your toots (or notes, status, or whatsoever) with the checkboxes in the top right corner.
+* `likes.json`: Your likes. Note that you are to deal with the copyright issues yourself.
+* `bookmarks.json`: Your bookmarks.
+
+After clicking the `I'm Done` button or having selected all the four files, the control buttons, checkboxes and the pleromar headings will be removed and now you may use your browser to archive the whole page (try `Ctrl+S`).

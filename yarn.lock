@@ -1016,10 +1016,10 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
-"@mdi/font@^6.6.96":
+"@mdi/js@*", "@mdi/js@^6.6.96":
   version "6.6.96"
-  resolved "https://registry.npmmirror.com/@mdi/font/-/font-6.6.96.tgz#4eee6faee5f44d3ec401d354fb95775cd6699575"
-  integrity sha512-FbcvG9z17hwZ7IwX5XeOR1UYGoLq+gTKq6XNPvJFuCpn599GdiPCJbAmmDBJb+jMYXjKYr0lCxfouWGxDA82sA==
+  resolved "https://registry.npmmirror.com/@mdi/js/-/js-6.6.96.tgz#119f79fa9327359421167a7d4b8bde26e84702ce"
+  integrity sha512-ke9PN5DjPCOlMfhioxeZYADz8Yiz6v47W0IYRza01SSJD7y1EwESVpwFnnFUso+eCoWtE1CO9cTIvQF6sEreuA==
 
 "@node-ipc/js-queue@2.0.3":
   version "2.0.3"
@@ -4095,6 +4095,13 @@ make-dir@^3.0.2, make-dir@^3.1.0:
   integrity sha512-g3FeP20LNwhALb/6Cz6Dd4F2ngze0jz7tbzrD2wAV+o9FeNHe4rL+yK2md0J/fiSf1sa1ADhXqi5+oVwOM/eGw==
   dependencies:
     semver "^6.0.0"
+
+mdi-vue@^3.0.12:
+  version "3.0.12"
+  resolved "https://registry.npmmirror.com/mdi-vue/-/mdi-vue-3.0.12.tgz#4149774f33005247fa0818fc86214b26ae2dbce6"
+  integrity sha512-rc4rq99Hafa7v1u3KyfzGRr13v7/AzBvNrcXdhcgPQvj8wYafimbLGfNvQcGiAYZMow40KpXlZuG07132XccKw==
+  dependencies:
+    "@mdi/js" "*"
 
 mdn-data@2.0.14:
   version "2.0.14"
