@@ -11,7 +11,30 @@
     <noscript>
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
+    <button id="start">Start!</button>
     <div id="app"></div>
+    <script>
+      for (var button of document.querySelectorAll('button.expand')) {
+        button.onclick = (e) => {
+          e.target.style.display = 'none'
+          e.target.nextElementSibling.style.display = ''
+        }
+      }
+
+      var tabs = []
+      for (var radio of document.querySelectorAll('input.selection-radios')) {
+        radio.onchange = (e) => {
+          for (var tab of tabs) {
+            if (tab.id === e.target.value) {
+              tab.style.display = ''
+            } else {
+              tab.style.display = 'none'
+            }
+          }
+        }
+        tabs.push(document.getElementById(radio.value))
+      }
+    </script>
     <!-- built files will be auto injected -->
   </body>
 </html>
